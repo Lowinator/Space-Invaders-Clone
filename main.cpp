@@ -186,7 +186,7 @@ void game(int score, int level, int pew, int brzprot) {
 		for (int a = 0; a < 20; a++)				// ispis svega
 			cout << polje[a] << endl;
 			
-		cout << "Lifes: " ;						// ispis zivota
+		cout << "Lives: " ;						// ispis zivota
 		for(int i = 0; i < zivoti; i++)
 			cout << "^ ";		
 		
@@ -497,13 +497,13 @@ void menu() {
 
 		for ( int i = 0; i < 13; i++)
 			cout << polje1[i];
-		cout <<"         Help: Move - arrow keys " << endl;
+		cout <<"         Help:  Move - Arrow keys " << endl;
 		for ( int i = 0; i < 10; i++)
 			cout << polje2[i];
-		cout <<"                   Shoot - space " << endl;
+		cout <<"                   Shoot - Space " << endl;
 		cout <<"                             Sound - M " << endl;
-		cout <<"                             Exit the game - esc " << endl;
-		cout <<"                             Apply in settings - enter " << endl;
+		cout <<"                             Exit the game - Esc " << endl;
+		cout <<"                             Apply in settings - Enter " << endl;
 		cout <<"                             Pause - P " << endl;
 		
 		switch(ulaz) {
