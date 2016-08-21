@@ -546,7 +546,7 @@ void options() {
 	bool optionz = true;
 	
 	string menuItems[5];
-	menuItems[0] = " > Lifes -";
+	menuItems[0] = " > Lives -";
 	menuItems[1] = "   Players projectile frequency -";
 	menuItems[2] = "   Enemies projectile frequency -";
 	menuItems[3] = "   Enemies movement speed -";
@@ -590,7 +590,7 @@ void options() {
 		cout << menuItems[4]; 
 		cout << "\n\n";
 		
-		cout <<"                       Use the arrow keys to Increase/Decrease values" << endl;
+		cout <<"                  Use the arrow keys to Increase/Decrease values" << endl;
 		
 		if (GetAsyncKeyState (VK_UP)) {
 			if (a > 0) {
