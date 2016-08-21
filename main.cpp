@@ -56,9 +56,9 @@ void gameOver(int score, int level) {
 	cout << "	  #####  #    # #    # ######    #######   ##   ###### #    # " << endl;
 	cout << "\n\n";
 	
-	cout << "				Bodovi: " << score << endl;		// ispis bodova
+	cout << "				Score: " << score << endl;		// prints the score
 	
-	cout << "				Level: " << level << endl;
+	cout << "				Level: " << level << endl;		// prints the level
 	cout << "\n\n";
 	
 	exit (EXIT_FAILURE);
@@ -81,7 +81,7 @@ void gameOver(int score, int level) {
 		"#                                     #",
 		"#                                     #",
 		"#                                     #",
-		"#          abcd                       #",
+		"#                                     #",
 		"#                                     #",
 		"#                  ^                  #",
 		"#######################################"
@@ -92,23 +92,23 @@ bool radi = true;
 int x = 19;				// player/ship coordinates
 int y = 18;
 
-int c = 0;             // za projektile
+int c = 0;             // used for projectiles
 int k = 0;
 int metakx[999999];
 int metaky[999999];
 bool tak[999999];
 
-int f = 0;				// za micanje protivnickih brodova
+int f = 0;				// used for the movement of enemy ships
 int g = 2;
 int h = 8;
 
-int xprot[72];			// za micanje protivnickih brodova
+int xprot[72];			// used for the movement of enemy ships
 int yprot[72];
 int m = 0;
 bool desno = true;
 bool lijevo = false;
 
-bool protivnici[72];	// broj protivnika koji su jos u igri
+bool protivnici[72];	// number of enemies alive
 int ostaliprot = 0;
 
 int vr = 0;    			// vrijeme za pucanje
@@ -186,17 +186,17 @@ void game(int score, int level, int pew, int brzprot) {
 		for (int a = 0; a < 20; a++)				// ispis svega
 			cout << polje[a] << endl;
 			
-		cout << "Zivoti: " ;						// ispis zivota
+		cout << "Lifes: " ;						// ispis zivota
 		for(int i = 0; i < zivoti; i++)
 			cout << "^ ";		
 		
 		cout << "\n";
 		
-		cout << "Bodovi: " << score << endl;		// ispis bodova
+		cout << "Score: " << score << endl;		// ispis bodova
 		
 		cout << "Level: " << level << endl;
 		
-		cout << "Zvuk: ";
+		cout << "Sound: ";
 		if (mute == true)
 			cout << "Off";
 			else
@@ -500,11 +500,11 @@ void menu() {
 		cout <<"         Pomoc: Kretanje - strjelice " << endl;
 		for ( int i = 0; i < 10; i++)
 			cout << polje2[i];
-		cout <<"                   Pucanje - space " << endl;
-		cout <<"                             Zvuk - M " << endl;
-		cout <<"                             Ugasit igru - esc " << endl;
-		cout <<"                             Odabir u opcijama - enter " << endl;
-		cout <<"                             Pauza - P " << endl;
+		cout <<"                   Shoot - space " << endl;
+		cout <<"                             Sound - M " << endl;
+		cout <<"                             Exit the game - esc " << endl;
+		cout <<"                             Apply in settings - enter " << endl;
+		cout <<"                             Pause - P " << endl;
 		
 		switch(ulaz) {
 			case 1:						// start game
@@ -546,11 +546,11 @@ void options() {
 	bool optionz = true;
 	
 	string menuItems[5];
-	menuItems[0] = " > Zivoti -";
-	menuItems[1] = "   Frekvencija pucanja -";
-	menuItems[2] = "   Frekvencija pucanja protivnika -";
-	menuItems[3] = "   Brzina protivnika -";
-	menuItems[4] = "   Natrag";
+	menuItems[0] = " > Lifes -";
+	menuItems[1] = "   Players projectile frequency -";
+	menuItems[2] = "   Enemies projectile frequency -";
+	menuItems[3] = "   Enemies movement speed -";
+	menuItems[4] = "   Return";
 	
 	while (optionz == true) {
 		Sleep(150);
@@ -572,25 +572,25 @@ void options() {
 		cout << "\n\n";
 		cout << menuItems[1];
 			
-		cout << " " << brzmet << " (Veca brojka --> manja frekvencija)";		// ispis frekv. metaka u opcijama
+		cout << " " << brzmet << " (Bigger number --> smaller frequency)";		// ispis frekv. metaka u opcijama
 		
 		cout << "\n\n";	
 		cout << menuItems[2];
 			
-		cout << " " << pew << " (Veca brojka --> manja frekvencija)";		// ispise frekv. pucanja protivnika
+		cout << " " << pew << " (Bigger number --> smaller frequency)";		// ispise frekv. pucanja protivnika
 			
 		cout << "\n\n";
 		
 		cout << menuItems[3];
 			
-		cout << " " << brzprot << " (Veca brojka --> sporiji protivnici)";		// ispis brznine metaka u opcijama
+		cout << " " << brzprot << " (Bigger number --> slower enemies)";		// ispis brznine metaka u opcijama
 		
 		cout << "\n\n";
 		
 		cout << menuItems[4]; 
 		cout << "\n\n";
 		
-		cout <<"                       Povecaj i smanjuj s strijelicama." << endl;
+		cout <<"                       Use the arrow keys to Increase/Decrease values" << endl;
 		
 		if (GetAsyncKeyState (VK_UP)) {
 			if (a > 0) {
