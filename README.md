@@ -9,4 +9,4 @@ Screenshots:
 
 ![InGame Screenshot](Screenshots/SpaceInvaderz Screenshot2.JPG?raw=true "Labyrinth Screenshot")
 
-![Menu Screenshot](Screenshots/SpaceInvaderz Screenshot.JPG?raw=true "Labyrinth Screenshot")
+![Menu Screenshot](Screenshots/SpaceInvaderz Screenshot1.JPG?raw=true "Labyrinth Screenshot")
