@@ -497,7 +497,7 @@ void menu() {
 
 		for ( int i = 0; i < 13; i++)
 			cout << polje1[i];
-		cout <<"         Pomoc: Kretanje - strjelice " << endl;
+		cout <<"         Help: Move - arrow keys " << endl;
 		for ( int i = 0; i < 10; i++)
 			cout << polje2[i];
 		cout <<"                   Shoot - space " << endl;
