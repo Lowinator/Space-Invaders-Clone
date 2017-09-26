@@ -7,6 +7,8 @@ It's a space invaders clone, runs on windows only, programmed procedurally.
 
 Screenshots:
 
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+
 ![InGame Screenshot](Screenshots/SpaceInvaderz Screenshot2.JPG?raw=true "Labyrinth Screenshot")
 
-![Menu Screenshot](Screenshots/SpaceInvaderz Screenshot1.JPG?raw=true "Labyrinth Screenshot")
+![Menu Screenshot](Screenshots/SpaceInvaderz Screenshot1.JPG?raw=true "Labyrinth Screenshot2")
